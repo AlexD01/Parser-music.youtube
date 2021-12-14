@@ -1,0 +1,32 @@
+﻿<a href="{% url 'app:index'%}">back</a>
+<br />
+Playlists 
+{% if playlists%}
+    <ul>
+    {% for c in playlists %}
+        <li><a href="{{ c.url }}">{{ c.name }} </a>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Playlists are available.</p>
+{% endif %}
+Channels 
+{% if channels%}
+    <ul>
+    {% for c in channels %}
+        <li><a href="{{ c.url }}">{{ c.name }} </a>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Channels are available.</p>
+{% endif %}
+Videos 
+{% if watches%}
+    <ul>
+    {% for c in watches %}
+        <li><a href="{{ c.url }}">{{ c.name }} </a>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Videos are available.</p>
+{% endif %}
